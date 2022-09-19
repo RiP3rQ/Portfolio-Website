@@ -1,5 +1,7 @@
 /* !FONTS */
+
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400&display=swap');
+
 /* !BASE STYLES/RESET */
 
 :root{
@@ -11,6 +13,67 @@
     --body-font-family: 'Poppins', 'sans-serif';
     --container-padding: 1.5rem;
     --section-vertical-spacing: 8rem;
+}
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    /* 10px */
+    font-size: 62.5%;
+}
+
+body{
+    font-family: var(--body-font-family);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    overflow-x: hidden;
+}
+
+body.dark-theme{
+    --light-color: #000;
+    --dark-color: #fff;
+    --border-top-color: rgba(255,255,255,.1);
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+ul{
+    list-style: none;
+}
+
+span{
+   display: inline-block; 
+}
+
+i{
+    font-size: 2.4rem;
+}
+
+input,
+button,
+textarea{
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    border: none;
+    outline: none;
 }
 /* 
 ?RADIAL GRADIENT
