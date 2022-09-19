@@ -145,9 +145,10 @@ textarea{
     color: var(--light-color);
     padding: .8rem 1.5rem;
     border-radius: .4rem;
-    /* z-index: -1; */
+    z-index: -1;
     pointer-events: none;
     transform: scale(0);
+    transform-origin: right;
     transition: transform .25s .25s cubic-bezier(1,0,0,1);
 }
 
@@ -180,7 +181,7 @@ textarea{
 /* !JAVASCRIPT STYLES */
 
 .active.menu{
-    /* z-index: initial; */
+    z-index: initial;
     pointer-events: initial;
     transform: scale(1) translateY(4.5rem);
 }
@@ -190,7 +191,21 @@ textarea{
     transition: opacity .1s .5s;
 }
 
-.a
+.active .open-icon{
+    display: none;
+}
+
+.active .close-icon{
+    display: block;
+}
+
+.dark-theme .theme-off{
+    display: none;
+}
+
+.dark-theme .theme-on{
+    display: block;
+}
 
 /* !HERO STYLES*/
 
