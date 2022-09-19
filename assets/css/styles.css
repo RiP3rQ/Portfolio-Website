@@ -88,6 +88,25 @@ textarea{
     padding: var(--container-padding);
 }
 
+.section{
+    padding-block: var(--section-vertical-spacing);
+    position: relative;
+}
+
+.has-sparkles,
+.has-sparkles-alt{
+    position: relative;
+}
+
+.has-sparkles::before,
+.has-sparkles::after{
+    content: '';
+    position: absolute;
+    background: url('../images/sparkle.png') center no-repeat;
+    background-size: cover;
+}
+
+
 /* !HEADER */
 
 .header{
@@ -167,6 +186,7 @@ textarea{
 
 .list-link{
     font-size: 1.4rem;
+    color: var(--light-color);
 }
 
 .list-link:hover,
@@ -209,6 +229,64 @@ textarea{
 
 /* !HERO STYLES*/
 
+.title{
+    font-family: var(--title-font-family);
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.main-title{
+    font-size: clamp(5rem, 10vw, 10rem);
+    text-align: center;
+    line-height: 1.2;
+}
+
+.inline-image{
+    height: 7rem;
+    width: 7rem;
+    background: url('../images/statue_hero.png') top center no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    border-bottom-left-radius: 0;
+    margin: 0 1.5rem;
+}
+
+.dark-theme .has-sparkles::before,
+.dark-theme .has-sparkles::after{
+    background: url('../images/sparkle_light.png') center no-repeat;
+    background-size: cover;
+}
+
+.inline-image.has-sparkles::before{
+    width: 1rem;
+    height: 1rem;
+    top: -.5rem;
+    right: -.5rem;
+}
+
+.inline-image.has-sparkles::after{
+    width: .8rem;
+    height: .8rem;
+    bottom: 1rem;
+    right: -1.5rem;
+}
+
+.has-sparkles-alt::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 5vw;
+    max-width: 5rem;
+    height: 5vw;
+    max-height: 5rem;
+    background: url('../images/sparkle_alt.png') center no-repeat;
+    background-size: cover;
+}
+
+.dark-theme .has-sparkles-alt::after{
+    background: url('../images/sparkle_alt_light.png') center no-repeat;
+    background-size: cover;
+}
 /* !ABOUT ME STYLES */
 
 /* !PORTFOLIO STYLES */
