@@ -203,7 +203,9 @@ textarea{
 }
 
 .list-link:hover,
-.list-link:focus{
+.list-link:focus,
+.scroll-top:hover,
+.scroll-top:focus{
     opacity: .7;
 }
 
@@ -548,7 +550,72 @@ textarea{
 
 /* !CONTACT STYLES */
 
+.contact-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.input{
+    position: relative;
+    margin-bottom: 5rem;
+}
+
+.input-label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: transform .25s;
+}
+
+.input input{
+    width: 100%;
+    border-bottom: 1px solid var(--dark-color);
+    padding: .5rem;
+}
+
+.input input:focus + .input-label{
+    transform: translateY(-2.5rem);
+}
+
+.form-button{
+    display: inline-block;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    margin: 0 auto;
+}
+
+.required-field{
+    font-size: 1rem;
+    color: #ff7575;
+    transform: translateY(-.8rem);
+}
+
 /* !FOOTER STYLES */
+
+.footer-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    border-top: 1px solid var(--border-top-color);
+    padding-top: 5rem;
+    padding-bottom: 1.5rem;
+}
+
+.footer .list-link{
+    color: var(--dark-color)
+}
+
+.scroll-top{
+    display: flex;
+    align-items: center;
+    color: var(--dark-color);
+}
+
+
 
 /* !SCROLLBAR */
 
